@@ -4,7 +4,7 @@ const Contact = () => {
       <h2 className="text-2xl font-semibold">
         Contact Me
       </h2>
-<p className="underline text-center">+ 91 7093849229</p>
+<p className="underline text-center">+ 91 7382842954</p>
       {/* <p className="mb-4">
         I'm open to MERN developer opportunities. Please feel free to reach out if you have any questions or want to collaborate on a project!
       </p> */}
