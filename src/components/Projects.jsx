@@ -4,6 +4,7 @@ const projects = [
   {
     title: "Hospital Management System",
     tech: "Next.js • Node.js • MongoDB",
+    View: "https://hospital-management-portal-ten.vercel.app/",
   },
   {
     title: "MERN Authentication",
@@ -33,6 +34,14 @@ const Projects = () => {
             </h3>
 
             <p>{project.tech}</p>
+            <a
+              href={project.View}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-300 hover:text-blue-500 underline"
+            >
+              View Project
+            </a>
           </motion.div>
         ))}
       </div>
