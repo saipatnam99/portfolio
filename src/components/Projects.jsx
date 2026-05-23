@@ -14,36 +14,37 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section
-      id="projects"
-      className="py-10 bg-gray-200 flex flex-col items-center px-6"
-    >
-      <h2 className="text-3xl font-bold text-center mb-10">
-        Projects
-      </h2>
+    <section id="projects" className="bg-gray-200 px-4 py-10 sm:px-6">
+      <div className="mx-auto max-w-4xl text-center">
+        <h2 className="mb-8 text-3xl font-bold">Projects</h2>
 
-      <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto justify-center">
-        {projects.map((project, index) => (
-          <motion.div
-            key={index}
-            whileHover={{ scale: 1.05 }}
-            className="bg-teal-700 p-6 rounded-lg text-white shadow text-center"
-          >
-            <h3 className="text-xl font-bold mb-2">
-              {project.title}
-            </h3>
-
-            <p>{project.tech}</p>
-            <a
-              href={project.View}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-300 hover:text-blue-500 underline"
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+          {projects.map((project, index) => (
+            <motion.div
+              key={index}
+              whileHover={{ scale: 1.02 }}
+              className="rounded-2xl bg-teal-700 p-6 text-white shadow-lg"
             >
-              View Project
-            </a>
-          </motion.div>
-        ))}
+              <h3 className="mb-3 text-xl font-bold">{project.title}</h3>
+              <p className="mb-4 text-sm leading-relaxed text-teal-50">{project.tech}</p>
+
+              {project.View ? (
+                <a
+                  href={project.View}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center rounded-md bg-white px-4 py-2 text-sm font-semibold text-teal-700 transition hover:bg-teal-50"
+                >
+                  View Project
+                </a>
+              ) : (
+                <span className="inline-flex items-center justify-center rounded-md bg-white/10 px-4 py-2 text-sm font-semibold text-teal-50">
+                  Coming Soon
+                </span>
+              )}
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );

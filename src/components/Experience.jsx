@@ -31,43 +31,27 @@ const Experience = () => {
   ];
 
   return (
-    <section
-      id="experience"
-      className="py-10 bg-gradient-to-b bg-gray-200 text-black"
-    >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="experience" className="bg-gray-200 py-10 text-black">
+      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+        <div className="mb-12 text-center">
+          <h2 className="text-3xl font-bold sm:text-4xl md:text-5xl">Experience</h2>
 
-        {/* Section Heading */}
-        <div className="text-center mb-14">
-          <h2 className="text-4xl md:text-5xl font-bold">
-            Experience
-          </h2>
-
-          <p className="text-gray-600 mt-4 max-w-3xl mx-auto text-lg leading-relaxed">
+          <p className="mx-auto mt-4 max-w-3xl text-sm leading-relaxed text-gray-600 sm:text-base">
             Experienced in MERN stack and full stack development with hands-on
             expertise in building scalable web applications, REST APIs,
             responsive user interfaces, and production-ready systems.
           </p>
         </div>
 
-        {/* Experience Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
           {experiences.map((exp, index) => (
             <div
               key={index}
-              className="bg-white border border-gray-200 rounded-2xl p-8 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+              className="rounded-2xl border border-gray-200 bg-white p-6 shadow-md transition duration-300 hover:-translate-y-1 hover:shadow-xl sm:p-8"
             >
-
-              {/* Header */}
               <div className="mb-6">
-                <h3 className="text-2xl font-bold text-gray-900">
-                  {exp.role}
-                </h3>
-
-                <p className="text-teal-600 font-semibold mt-1">
-                  {exp.company}
-                </p>
+                <h3 className="text-xl font-bold text-gray-900 sm:text-2xl">{exp.role}</h3>
+                <p className="mt-1 font-semibold text-teal-600">{exp.company}</p>
 
                 <div className="mt-3 text-sm text-gray-500">
                   <p>{exp.duration}</p>
@@ -75,20 +59,18 @@ const Experience = () => {
                 </div>
               </div>
 
-              {/* Responsibilities */}
               <div>
-                <h4 className="text-lg font-semibold mb-4 text-gray-800">
+                <h4 className="mb-4 text-base font-semibold text-gray-800 sm:text-lg">
                   Key Responsibilities
                 </h4>
 
-                <ul className="space-y-4">
+                <ul className="space-y-3 sm:space-y-4">
                   {exp.responsibilities.map((item, idx) => (
                     <li
                       key={idx}
-                      className="flex items-start gap-3 text-gray-700 leading-relaxed"
+                      className="flex items-start gap-3 text-sm leading-relaxed text-gray-700 sm:text-base"
                     >
                       <span className="mt-2 h-2 w-2 rounded-full bg-teal-500"></span>
-
                       <span>{item}</span>
                     </li>
                   ))}
@@ -98,14 +80,13 @@ const Experience = () => {
           ))}
         </div>
 
-        {/* Bottom Highlight */}
-        <div className="mt-14 flex justify-center">
-          <div className="bg-teal-600 text-white px-6 py-4 rounded-2xl shadow-lg max-w-auto text-center">
-            <h3 className="text-2xl font-semibold">
-             Looking For The Roles: MERN Stack & Full Stack Developer
+        <div className="mt-12 flex justify-center">
+          <div className="w-full max-w-3xl rounded-2xl bg-teal-600 px-5 py-5 text-center text-white shadow-lg sm:px-6">
+            <h3 className="text-lg font-semibold sm:text-2xl">
+              Looking For The Roles: MERN Stack & Full Stack Developer
             </h3>
 
-            <p className="text-teal-100 mt-3 leading-relaxed">
+            <p className="mt-3 text-sm leading-relaxed text-teal-100 sm:text-base">
               Skilled in React.js, Next.js, Node.js, Express.js, MongoDB,
               Tailwind CSS, REST APIs, and scalable full stack application development.
             </p>
