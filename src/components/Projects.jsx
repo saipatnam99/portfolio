@@ -7,8 +7,10 @@ const projects = [
     View: "https://hospital-management-portal-ten.vercel.app/",
   },
   {
-    title: "MERN Authentication",
-    tech: "Node.js • JWT • MongoDB",
+    title: "Employee Management System",
+    tech: " Node.js • JWT • MongoDB • React.js • Tailwind CSS ",
+    View: "https://ems-app-hr.vercel.app/",
+  Credentials: "username: admin@gmail.com , password: Admin@123",
   },
 ];
 
@@ -27,6 +29,11 @@ const Projects = () => {
             >
               <h3 className="mb-3 text-xl font-bold">{project.title}</h3>
               <p className="mb-4 text-sm leading-relaxed text-teal-50">{project.tech}</p>
+              {project.Credentials && (
+                <p className="mb-4 text-sm leading-relaxed text-teal-50">
+                  <strong>Credentials:</strong> {project.Credentials}
+                </p>
+              )}
 
               {project.View ? (
                 <a
